@@ -3,11 +3,11 @@ from Config import Config
 from telethon import events, Button
 
 PM_START_TEXT = """
-ʜᴇʏᴀ! {}
+Halo ! {}
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-Halo ! , Saya Adalah Mirc Music Bot. Siap Menemani Anda Memutar Music Dengan Mudah Di Voice Chat Groups.!
+Perkenalkan Saya Adalah Mirc Music Bot. Siap Menemani Anda Memutar Music Dengan Mudah Di Voice Chat Groups.!
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-✘ **ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ 🔘 ꜰᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ℹ️**.
+✘ **Tekan Tombol Help Untuk Mengetahui Fitur Saya ℹ️**.
 """
 
 @Zaid.on(events.NewMessage(pattern="^[?!/]start$"))
@@ -20,8 +20,8 @@ async def start(event):
              caption=PM_START_TEXT.format(event.sender.first_name), 
              buttons=[
         [Button.url("➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ", f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-        [Button.url("👨‍ Owner", "https://t.me/https://t.me/@riasyee")],
-        [Button.url("🗣️ ꜱᴜᴘᴘᴏʀᴛ", f"https://t.me/{Config.SUPPORT}"), Button.url("📣 ᴜᴘᴅᴀᴛᴇꜱ", f"https://t.me/{Config.CHANNEL}")],
+        [Button.url("👨‍ Pemilik", "https://t.me/https://t.me/riasyee")],
+        [Button.url("🗣️ ꜱᴜᴘᴘᴏʀᴛ", f"https://t.me/mircmusic"), Button.url("📣 ᴜᴘᴅᴀᴛᴇꜱ", f"https://t.me/mcmusicsupport")],
         [Button.inline("ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅꜱ", data="help")]])
        return
 
